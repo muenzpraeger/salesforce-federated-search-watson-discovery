@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:sfdc="http://salesforce.com/2016/federatedsearch/1.0">
+	<ShortName>Salesforce Federated Search and Watson Discovery</ShortName>
+	<Contact>mail@winkelmeyer.com</Contact>
+	<Url type="application/atom+xml" sfdc:maxTotalResults="500"
+template="https://{{hostname}}/ossInterface?q={searchTerms}&amp;byId={sfdc:searchById?}&amp;type={sfdc:recordType}&amp;user={sfdc:userEmail?}&amp;start={startIndex?}&amp;num={count?}&amp;sf={sfdc:sortField?}&amp;sd={sfdc:sortDirection?}"/>
+	<sfdc:RecordTypes>
+		<sfdc:RecordType name="Watson Discovery">
+			<sfdc:Field name="Author" type="string" sortable="true"/>
+			<sfdc:Field name="Source" type="string" sortable="true"/>
+			<sfdc:Field name="Date" type="date" sortable="true"/>
+		</sfdc:RecordType>
+	</sfdc:RecordTypes>
+	<Attribution>
+		Copyright 2017, René Winkelmeyer, All Rights Reserved
+	</Attribution>
+	<InputEncoding>UTF-8</InputEncoding>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<sfdc:Version>1</sfdc:Version>
+</OpenSearchDescription>
